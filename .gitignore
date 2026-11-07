@@ -1,8 +1,13 @@
-__pycache__/
-*.pyc
 *.egg-info/
+*.jsonl.tmp
+*.pyc
+.env
+.env.*
 .pytest_cache/
 .ruff_cache/
-dist/
+.venv/
+__pycache__/
 build/
-*.jsonl.tmp
+dist/
+dist/*.tmp
+node_modules/
