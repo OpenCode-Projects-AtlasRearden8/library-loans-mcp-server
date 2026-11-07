@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "library-loans-mcp-server"
+version = "0.1.0"
+description = "Local MCP server tracking borrowed library books: record loans, holds, and renewals; query due-soon, overdue, and per-branch tallies. All data stays on disk."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Asdale Dynamics, LLC" }]
+keywords = ["mcp", "library", "loans", "holds", "local-first"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3",
+    "Topic :: Utilities",
+]
+dependencies = ["mcp>=1.2,<3"]
+
+[project.scripts]
+library-loans-server = "library_loans.server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
